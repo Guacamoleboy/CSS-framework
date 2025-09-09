@@ -9,3 +9,873 @@
 
 */
 
+/* ______________________________________________ */
+
+				    /* ROOT */
+/* ______________________________________________ */
+
+:root {
+    --guac-primary: #007bff;
+    --guac-secondary: #6c757d;
+    --guac-success: #28a745;
+    --guac-danger: #dc3545;
+    --guac-warning: #ffc107;
+    --guac-info: #17a2b8;
+    --guac-light: #f8f9fa;
+    --guac-dark: #343a40;
+
+    --guac-white: #ffffff;
+    --guac-black: #000000;
+
+    --guac-body-bg: #ffffff;
+    --guac-body-color: #333333;
+
+    --guac-blue: #0d6efd;
+    --guac-indigo: #6610f2;
+    --guac-purple: #6f42c1;
+    --guac-pink: #d63384;
+    --guac-red: #dc3545;
+    --guac-orange: #fd7e14;
+    --guac-yellow: #ffc107;
+    --guac-green: #198754;
+    --guac-teal: #20c997;
+    --guac-cyan: #0dcaf0;
+    --guac-gray: #6c757d;
+    --guac-gray-dark: #343a40;
+    --guac-gray-light: #f8f9fa;
+}
+
+/* ______________________________________________ */
+
+				    /* BODY */
+/* ______________________________________________ */
+
+/* Default values incase a browser chooses to overwrite layout */
+/* 1rem = 16px */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+/* ______________________________________________ */
+
+				   /* Headers */
+/* ______________________________________________ */
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;     
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.75rem;  
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;   
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;  
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 1rem;     
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+/* ______________________________________________ */
+
+				 /* Text & Links */
+/* ______________________________________________ */
+
+p {
+    font-size: 1rem;     
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #007bff;      
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ______________________________________________ */
+
+				    /* Lists */
+/* ______________________________________________ */
+
+ul, ol {
+    margin: 0 0 1rem 2rem; 
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ______________________________________________ */
+
+			   /* Text Formatting */
+/* ______________________________________________ */
+
+strong {
+    font-weight: bold;
+}
+
+b {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+i {
+    font-style: italic;
+}
+
+small {
+    font-size: 0.875rem;
+}
+
+mark {
+    background-color: #fffb91;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: 0.75rem;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.75rem;
+}
+
+code {
+    font-family: monospace;
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+blockquote {
+    margin: 0 0 1rem 0;
+    padding-left: 1rem;
+    border-left: 0.25rem solid #dee2e6;
+    color: #6c757d;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 2rem 0;
+}
+
+/* ______________________________________________ */
+
+			     /* Container */
+/* ______________________________________________ */
+
+.guac-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+/* ______________________________________________ */
+
+			   		/* Row */
+/* ______________________________________________ */
+
+.guac-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem; 
+    margin-right: -0.5rem;
+}
+
+/* ______________________________________________ */
+
+			   	   /* Column */
+/* ______________________________________________ */
+
+.guac-col {
+    flex: 1 1 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+}
+
+.guac-col-1 {
+    flex: 0 0 8.3333%;
+    max-width: 8.3333%;
+}
+
+.guac-col-2 {
+    flex: 0 0 16.6667%;
+    max-width: 16.6667%;
+}
+
+.guac-col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.guac-col-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.guac-col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.guac-col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* ______________________________________________ */
+
+			   	   /* Margin */
+/* ______________________________________________ */
+
+.guac-m-0 {
+    margin: 0;
+}
+
+.guac-m-1 {
+    margin: 0.25rem;
+}
+
+.guac-m-2 {
+    margin: 0.5rem;
+}
+
+.guac-m-3 {
+    margin: 1rem;
+}
+
+.guac-m-4 {
+    margin: 1.5rem;
+}
+
+.guac-m-5 {
+    margin: 3rem;
+}
+
+.guac-mt-0 {
+    margin-top: 0;
+}
+
+.guac-mt-1 {
+    margin-top: 0.25rem;
+}
+
+.guac-mt-2 {
+    margin-top: 0.5rem;
+}
+
+.guac-mt-3 {
+    margin-top: 1rem;
+}
+
+.guac-mt-4 {
+    margin-top: 1.5rem;
+}
+
+.guac-mt-5 {
+    margin-top: 3rem;
+}
+
+.guac-mb-0 {
+    margin-bottom: 0;
+}
+
+.guac-mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.guac-mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.guac-mb-3 {
+    margin-bottom: 1rem;
+}
+
+.guac-mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.guac-mb-5 {
+    margin-bottom: 3rem;
+}
+
+.guac-ml-0 {
+    margin-left: 0;
+}
+
+.guac-ml-1 {
+    margin-left: 0.25rem;
+}
+
+.guac-ml-2 {
+    margin-left: 0.5rem;
+}
+
+.guac-ml-3 {
+    margin-left: 1rem;
+}
+
+.guac-ml-4 {
+    margin-left: 1.5rem;
+}
+
+.guac-ml-5 {
+    margin-left: 3rem;
+}
+
+.guac-mr-0 {
+    margin-right: 0;
+}
+
+.guac-mr-1 {
+    margin-right: 0.25rem;
+}
+
+.guac-mr-2 {
+    margin-right: 0.5rem;
+}
+
+.guac-mr-3 {
+    margin-right: 1rem;
+}
+
+.guac-mr-4 {
+    margin-right: 1.5rem;
+}
+
+.guac-mr-5 {
+    margin-right: 3rem;
+}
+
+/* ______________________________________________ */
+
+			   	   /* Height */
+/* ______________________________________________ */
+
+.guac-h-0 {
+    height: 0;
+}
+
+.guac-h-1 {
+    height: 1rem;
+}
+
+.guac-h-2 {
+    height: 2rem;
+}
+
+.guac-h-3 {
+    height: 3rem;
+}
+
+.guac-h-4 {
+    height: 4rem;
+}
+
+.guac-h-5 {
+    height: 5rem;
+}
+
+.guac-h-6 {
+    height: 6rem;
+}
+
+.guac-h-7 {
+    height: 7rem;
+}
+
+.guac-h-8 {
+    height: 8rem;
+}
+
+.guac-h-9 {
+    height: 9rem;
+}
+
+.guac-h-10 {
+    height: 10rem;
+}
+
+.guac-h-auto {
+    height: auto;
+}
+
+/* ______________________________________________ */
+
+			   	   /* Display */
+/* ______________________________________________ */
+
+.guac-d-block {
+    display: block;
+}
+
+.guac-d-inline {
+    display: inline;
+}
+
+.guac-d-inline-block {
+    display: inline-block;
+}
+
+.guac-d-flex {
+    display: flex;
+}
+
+.guac-d-inline-flex {
+    display: inline-flex;
+}
+
+.guac-d-none {
+    display: none;
+}
+
+/* ______________________________________________ */
+
+			   	    /* FLEX */
+/* ______________________________________________ */
+
+.guac-flex-row {
+    flex-direction: row;
+}
+
+.guac-flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.guac-flex-column {
+    flex-direction: column;
+}
+
+.guac-flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Justify content */
+.guac-justify-start {
+    justify-content: flex-start;
+}
+
+.guac-justify-end {
+    justify-content: flex-end;
+}
+
+.guac-justify-center {
+    justify-content: center;
+}
+
+.guac-justify-between {
+    justify-content: space-between;
+}
+
+.guac-justify-around {
+    justify-content: space-around;
+}
+
+.guac-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.guac-align-start {
+    align-items: flex-start;
+}
+
+.guac-align-end {
+    align-items: flex-end;
+}
+
+.guac-align-center {
+    align-items: center;
+}
+
+.guac-align-baseline {
+    align-items: baseline;
+}
+
+.guac-align-stretch {
+    align-items: stretch;
+}
+
+/* Flex wrap */
+.guac-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.guac-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.guac-flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* ______________________________________________ */
+
+			   	   /* PADDING */
+/* ______________________________________________ */
+
+.guac-p-0 {
+    padding: 0;
+}
+
+.guac-p-1 {
+    padding: 0.25rem;
+}
+
+.guac-p-2 {
+    padding: 0.5rem;
+}
+
+.guac-p-3 {
+    padding: 1rem;
+}
+
+.guac-p-4 {
+    padding: 1.5rem;
+}
+
+.guac-p-5 {
+    padding: 3rem;
+}
+
+.guac-pt-0 {
+    padding-top: 0;
+}
+
+.guac-pt-1 {
+    padding-top: 0.25rem;
+}
+
+.guac-pt-2 {
+    padding-top: 0.5rem;
+}
+
+.guac-pt-3 {
+    padding-top: 1rem;
+}
+
+.guac-pt-4 {
+    padding-top: 1.5rem;
+}
+
+.guac-pt-5 {
+    padding-top: 3rem;
+}
+
+.guac-pb-0 {
+    padding-bottom: 0;
+}
+
+.guac-pb-1 {
+    padding-bottom: 0.25rem;
+}
+
+.guac-pb-2 {
+    padding-bottom: 0.5rem;
+}
+
+.guac-pb-3 {
+    padding-bottom: 1rem;
+}
+
+.guac-pb-4 {
+    padding-bottom: 1.5rem;
+}
+
+.guac-pb-5 {
+    padding-bottom: 3rem;
+}
+
+.guac-pl-0 {
+    padding-left: 0;
+}
+
+.guac-pl-1 {
+    padding-left: 0.25rem;
+}
+
+.guac-pl-2 {
+    padding-left: 0.5rem;
+}
+
+.guac-pl-3 {
+    padding-left: 1rem;
+}
+
+.guac-pl-4 {
+    padding-left: 1.5rem;
+}
+
+.guac-pl-5 {
+    padding-left: 3rem;
+}
+
+.guac-pr-0 {
+    padding-right: 0;
+}
+
+.guac-pr-1 {
+    padding-right: 0.25rem;
+}
+
+.guac-pr-2 {
+    padding-right: 0.5rem;
+}
+
+.guac-pr-3 {
+    padding-right: 1rem;
+}
+
+.guac-pr-4 {
+    padding-right: 1.5rem;
+}
+
+.guac-pr-5 {
+    padding-right: 3rem;
+}
+
+/* ______________________________________________ */
+
+			   	/* TEXT ALIGNMENT */
+/* ______________________________________________ */
+
+.guac-text-left {
+    text-align: left;
+}
+
+.guac-text-center {
+    text-align: center;
+}
+
+.guac-text-right {
+    text-align: right;
+}
+
+.guac-text-justify {
+    text-align: justify;
+}
+
+/* ______________________________________________ */
+
+			   	    /* WIDTH */
+/* ______________________________________________ */
+
+.guac-w-25 {
+    width: 25%;
+}
+
+.guac-w-50 {
+    width: 50%;
+}
+
+.guac-w-75 {
+    width: 75%;
+}
+
+.guac-w-100 {
+    width: 100%;
+}
+
+.guac-w-auto {
+    width: auto;
+}
+
+/* ______________________________________________ */
+
+			   	 /* FLEX WRAP */
+/* ______________________________________________ */
+
+.guac-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.guac-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.guac-flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* ______________________________________________ */
+
+			   	      /* GAP */
+/* ______________________________________________ */
+
+.guac-gap-0 {
+    gap: 0;
+}
+
+.guac-gap-1 {
+    gap: 0.25rem;
+}
+
+.guac-gap-2 {
+    gap: 0.5rem;
+}
+
+.guac-gap-3 {
+    gap: 1rem;
+}
+
+.guac-gap-4 {
+    gap: 1.5rem;
+}
+
+.guac-gap-5 {
+    gap: 3rem;
+}
+
+/* ______________________________________________ */
+
+			   	   /* HOVER */
+/* ______________________________________________ */
+
+.guac-hover-opacity:hover {
+    opacity: 0.8;
+}
+
+.guac-hover-underline:hover {
+    text-decoration: underline;
+}
+
+/* ______________________________________________ */
+
+			   	   /* BORDER */
+/* ______________________________________________ */
+
+.guac-border {
+    border: 1px solid #dee2e6;
+}
+
+.guac-border-0 {
+    border: none;
+}
+
+.guac-rounded {
+    border-radius: 0.25rem;
+}
+
+.guac-rounded-circle {
+    border-radius: 50%;
+}
+
+.guac-border-top {
+    border-top: 1px solid #dee2e6;
+}
+
+.guac-border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* ______________________________________________ */
+
+			   	    /* FONT */
+/* ______________________________________________ */
+
+.guac-fs-1 {
+    font-size: 0.75rem;
+}
+
+.guac-fs-2 {
+    font-size: 0.875rem;
+}
+
+.guac-fs-3 {
+    font-size: 1rem;
+}
+
+.guac-fs-4 {
+    font-size: 1.25rem;
+}
+
+.guac-fs-5 {
+    font-size: 1.5rem;
+}
+
+.guac-fs-6 {
+    font-size: 2rem;
+}
+
+.guac-fw-light {
+    font-weight: 300;
+}
+
+.guac-fw-normal {
+    font-weight: 400;
+}
+
+.guac-fw-bold {
+    font-weight: 700;
+}
+
+/* ______________________________________________ */
+
+			   	   /* OPACITY */
+/* ______________________________________________ */
+
+.guac-opacity-25 {
+    opacity: 0.25;
+}
+
+.guac-opacity-50 {
+    opacity: 0.5;
+}
+
+.guac-opacity-75 {
+    opacity: 0.75;
+}
+
+.guac-opacity-100 {
+    opacity: 1;
+}
