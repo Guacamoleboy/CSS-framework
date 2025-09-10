@@ -251,10 +251,16 @@ hr {
 /* ______________________________________________ */
 
 .guac-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -0.5rem; 
-    margin-right: -0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  gap: 1rem;
+}
+
+.guac-row > .guac-card {
+  margin: 0;
+  flex: 0 0 auto;
 }
 
 /* ______________________________________________ */
@@ -267,6 +273,11 @@ hr {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     box-sizing: border-box;
+}
+
+.guac-col-auto {
+  flex: 1 0 200px;
+  max-width: 100%;
 }
 
 .guac-col-1 {
@@ -294,9 +305,49 @@ hr {
     max-width: 50%;
 }
 
+.guac-col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
 .guac-col-12 {
     flex: 0 0 100%;
     max-width: 100%;
+}
+
+/* ______________________________________________ */
+
+			   	   /* Grid */
+/* ______________________________________________ */
+
+.guac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.guac-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.guac-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.guac-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.guac-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
 }
 
 /* ______________________________________________ */
@@ -910,6 +961,17 @@ hr {
 			   	   /* BUTTON */
 /* ______________________________________________ */
 
+.guac-alert-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: inherit;
+    float: right;
+    cursor: pointer;
+    line-height: 1;
+}
+
 .guac-btn {
     display: inline-block;
     font-weight: 400;
@@ -975,6 +1037,56 @@ hr {
     padding: 0.75rem 1.75rem;
     font-size: 1.25rem;
     border-radius: 0.5rem;
+}
+
+/* ______________________________________________ */
+
+			   	   /* NAVBAR */
+/* ______________________________________________ */
+
+.guac-navbar {
+  background-color: var(--guac-dark);
+  color: var(--guac-white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.guac-navbar-brand {
+  color: var(--guac-white);
+}
+
+.guac-navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guac-navbar-links li {
+  margin: 0;
+}
+
+.guac-navbar .guac-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.guac-navbar .guac-btn:hover {
+  color: var(--guac-gray-dark);
+}
+
+.guac-navbar-links a {
+  color: var(--guac-white);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.guac-navbar-links a:hover {
+  color: var(--guac-primary);
 }
 
 /* ______________________________________________ */
@@ -1078,3 +1190,190 @@ hr {
 .guac-badge-danger { background-color: var(--guac-danger); }
 .guac-badge-warning { background-color: var(--guac-warning); color: var(--guac-black); }
 .guac-badge-info { background-color: var(--guac-info); }
+
+/* ______________________________________________ */
+
+			   	  /* Progress */
+/* ______________________________________________ */
+
+.guac-progress {
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    height: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.guac-progress-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--guac-white);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    transition: width 0.6s ease;
+    padding: 0 0.5rem;
+}
+
+.guac-progress-sm {
+    height: 0.5rem;
+}
+.guac-progress-lg {
+    height: 1.5rem;
+}
+
+.guac-progress-primary { background-color: var(--guac-primary); }
+.guac-progress-success { background-color: var(--guac-success); }
+.guac-progress-danger  { background-color: var(--guac-danger); }
+.guac-progress-warning { background-color: var(--guac-warning); color: var(--guac-black); }
+.guac-progress-info    { background-color: var(--guac-info); }
+
+/* ______________________________________________ */
+
+			   	  /* Tooltip */
+/* ______________________________________________ */
+
+.guac-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.guac-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--guac-black);
+    color: var(--guac-white);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.guac-tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--guac-black) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.guac-tooltip:hover::after,
+.guac-tooltip:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-0.2rem);
+}
+
+/* ______________________________________________ */
+
+			   	  /* No Press */
+/* ______________________________________________ */
+
+.guac-no-press {
+    pointer-events: none;  
+    opacity: 0.6;          
+    user-select: none;    
+}
+
+/* ______________________________________________ */
+
+			   	  /* Locked */
+/* ______________________________________________ */
+
+.guac-locked {
+    opacity: 0.6;           
+    pointer-events: auto;
+    position: relative;   
+    cursor: not-allowed;
+}
+
+.guac-locked:hover {
+    opacity: 0.6;
+}
+
+/* ______________________________________________ */
+
+			   	  /* Badges */
+/* ______________________________________________ */
+
+.guac-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    color: #fff;
+    background-color: #6c757d;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.guac-badge:hover {
+    /*transform: translateY(-2px); Enable for y-exansion */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.guac-badge-primary { background-color: var(--guac-primary); }
+.guac-badge-success { background-color: var(--guac-success); }
+.guac-badge-warning { background-color: var(--guac-warning); }
+.guac-badge-danger  { background-color: var(--guac-danger); }
+.guac-badge-info    { background-color: var(--guac-info); }
+
+/* ______________________________________________ */
+
+			   	  /* Notification */
+/* ______________________________________________ */
+
+#guac-notification-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 9999;
+}
+
+.guac-notification {
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    color: var(--guac-white);
+    font-weight: bold;
+    min-width: 220px;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: default;
+    font-family: inherit;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.guac-notification:hover {
+    transform: translateX(0) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.guac-notification-primary { background-color: var(--guac-primary); }
+.guac-notification-success { background-color: var(--guac-success); }
+.guac-notification-danger  { background-color: var(--guac-danger); }
+.guac-notification-warning { background-color: var(--guac-warning); color: var(--guac-black); }
+.guac-notification-info    { background-color: var(--guac-info); }

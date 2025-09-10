@@ -15,12 +15,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guacamoleboy Framework Components</title>
 
-    <!-- Framework CSS -->
+    <!-- Custom Framework -->
     <link rel="stylesheet" href="guacamoleboy-wow.css">
     <link rel="stylesheet" href="guacamoleboy-framework.css">
     <link rel="stylesheet" href="guacamoleboy-animations.css">
 </head>
 <body>
+
+    <!-- Random Header Component With Framework -->
+    <nav class="guac-navbar guac-d-flex guac-justify-between guac-align-center guac-p-3 guac-animate guac-slide-down">
+        <div class="guac-navbar-brand guac-fs-5 guac-fw-bold">
+            Nav Component
+        </div>
+        <ul class="guac-navbar-links guac-d-flex guac-gap-4 guac-m-0 guac-align-center">
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#">Text</a></li>
+            <li><a href="#" class="guac-btn guac-btn-primary">Login / Sign Up</a></li>
+        </ul>
+    </nav>
 
     <header class="guac-text-center">
         <h1>Guacamoleboy Framework Components</h1>
@@ -53,9 +69,123 @@
         <section>
             <h2>Cards</h2>
             <div class="guac-card guac-col-3 guac-text-center">
-                <h3>Digga what</h3>
-                <p>This is a card.. Get it? Anyways..</p>
+                <h3>col-3</h3>
+                <p>I like melon</p>
             </div>
+            <div class="guac-card guac-col-4 guac-text-center">
+                <h3>col-4</h3>
+                <p>I like melon</p>
+            </div>
+            <div class="guac-card guac-col-6 guac-text-center">
+                <h3>col-6</h3>
+                <p>I like melon</p>
+            </div>
+            <div class="guac-card guac-col-9 guac-text-center">
+                <h3>col-9</h3>
+                <p>I like melon</p>
+            </div>
+            <div class="guac-card guac-col-12 guac-text-center">
+                <h3>col-12</h3>
+                <p>I like melon</p>
+            </div>
+        </section>
+
+        <!-- Grid -->
+        <section>
+            <h2>Grid</h2>
+            <div class="guac-grid">
+                <div class="guac-card">Card 1</div>
+                <div class="guac-card">Card 2</div>
+                <div class="guac-card">Card 3</div>
+                <div class="guac-card">Card 4</div>
+            </div>
+            <div class="guac-grid">
+                <div class="guac-card">Card 1</div>
+                <div class="guac-card">Card 2</div>
+            </div>
+            <div class="guac-grid">
+                <div class="guac-card">Card 1</div>
+                <div class="guac-card">Card 2</div>
+                <div class="guac-card">Card 3</div>
+            </div>
+            <div class="guac-grid">
+                <div class="guac-card">Card 1</div>
+                <div class="guac-card">Card 2</div>
+                <div class="guac-card">Card 3</div>
+                <div class="guac-card">Card 4</div>
+                <div class="guac-card">Card 5</div>
+                <div class="guac-card">Card 6</div>
+            </div>
+        </section>
+
+        <!-- Alerts -->
+        <section>
+            <h2>Alerts</h2>
+            <div class="guac-alert guac-col-3 guac-alert-success">
+                <span>Success! Operation completed successfully</span>
+                <button class="guac-alert-close" onclick="this.parentElement.style.display='none'">&times;</button>
+            </div>
+            <div class="guac-alert guac-col-3 guac-alert-info">
+                <span>Info! Some useful information for the user</span>
+                <button class="guac-alert-close" onclick="this.parentElement.style.display='none'">&times;</button>
+            </div>
+            <div class="guac-alert guac-col-3 guac-alert-warning">
+                <span>Warning! Be careful with this action</span>
+                <button class="guac-alert-close" onclick="this.parentElement.style.display='none'">&times;</button>
+            </div>
+            <div class="guac-alert guac-col-3 guac-alert-danger">
+                <span>Danger! Something went wrong</span>
+                <button class="guac-alert-close" onclick="this.parentElement.style.display='none'">&times;</button>
+            </div>
+        </section>
+
+        <!-- Progress Bar-->
+        <section>
+            <h2>Progress Bars</h2>
+            <div class="guac-row guac-gap-2">
+                <div class="guac-col-4">
+                    <div class="guac-progress">
+                        <div class="guac-progress-bar guac-progress-primary" style="width: 25%;">25%</div>
+                    </div>
+                </div>
+                <div class="guac-col-4">
+                    <div class="guac-progress">
+                        <div class="guac-progress-bar guac-progress-danger" style="width: 50%;">50%</div>
+                    </div>
+                </div>
+                <div class="guac-col-4">
+                    <div class="guac-progress">
+                        <div class="guac-progress-bar guac-progress-warning" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+                <div class="guac-col-4">
+                    <div class="guac-progress">
+                        <div class="guac-progress-bar guac-progress-success" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tooltip -->
+        <section>
+            <h2>Tooltips</h2>
+            <div class="guac-row guac-gap-3 guac-m-2">
+                <div class="guac-col-3 guac-text-center">
+                    <button class="guac-btn guac-btn-primary guac-tooltip" data-tooltip="Tooltip daddy">Hover over me</button>
+                    <button class="guac-btn guac-btn-primary guac-locked guac-tooltip" data-tooltip="Locked">
+                        Locked button
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Badgets -->
+        <section>
+            <h2>Badges</h2>
+            <span class="guac-badge guac-badge-primary">New</span>
+            <span class="guac-badge guac-badge-success">Success</span>
+            <span class="guac-badge guac-badge-warning">Warning</span>
         </section>
 
         <!-- Animations -->
@@ -68,13 +198,18 @@
             <div class="guac-animate guac-slide-in-left">Slide In Left</div>
             <div class="guac-animate guac-slide-right">Slide Right</div>
             <div class="guac-animate guac-zoom-in">Zoom In</div>
-            <div class="guac-animate guac-rotate-in">Rotate In</div>
             <div class="guac-animate guac-fade-out">Fade Out</div>
-            <div class="guac-animate guac-rotate-out">Rotate Out</div>
         </section>
+
+        <!-- Notifications -->
+        <section>
+            <div id="guac-notification-container"></div>
+        </section>
+
     </main>
 
     <!-- WOW / JS -->
     <script src="guacamoleboy-wow.js"></script>
+
 </body>
 </html>

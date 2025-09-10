@@ -220,3 +220,5 @@
   from { opacity: 1; transform: rotate(0deg); }
   to { opacity: 0; transform: rotate(200deg); }
 }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
