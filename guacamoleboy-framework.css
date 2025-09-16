@@ -168,63 +168,63 @@ li {
 			   /* Text Formatting */
 /* ______________________________________________ */
 
-strong {
+.strong {
     font-weight: bold;
 }
 
-b {
+.b {
     font-weight: bold;
 }
 
-em {
+.em {
     font-style: italic;
 }
 
-i {
+.i {
     font-style: italic;
 }
 
-small {
+.small {
     font-size: 0.875rem;
 }
 
-mark {
+.mark {
     background-color: #fffb91;
 }
 
-del {
+.del {
     text-decoration: line-through;
 }
 
-ins {
+.ins {
     text-decoration: underline;
 }
 
-sub {
+.sub {
     vertical-align: sub;
     font-size: 0.75rem;
 }
 
-sup {
+.sup {
     vertical-align: super;
     font-size: 0.75rem;
 }
 
-code {
+.code {
     font-family: monospace;
     background-color: #f8f9fa;
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
 }
 
-blockquote {
+.blockquote {
     margin: 0 0 1rem 0;
     padding-left: 1rem;
     border-left: 0.25rem solid #dee2e6;
     color: #6c757d;
 }
 
-hr {
+.hr {
     border: none;
     border-top: 1px solid #dee2e6;
     margin: 2rem 0;
